@@ -8,7 +8,7 @@ spec:
     app: appv1
   ports:
   - protocol: TCP
-    port: 8181
+    port: 80
 
 ---
 
@@ -32,4 +32,4 @@ spec:
       - name: appv1
         image: us.gcr.io/sincere-chariot-260312/app1@sha256:24b8bd3a7ca8ea802c061d933f75115a95d129187e82b4c540bdea2cebba5776
         ports:
-        - containerPort: 8181
+        - containerPort: 80
