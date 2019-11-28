@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         PATH = "/usr/local/go/bin:$PATH"
-        DOCKER_IMAGE_NAME = "harbor.corp.local/library/go-cicd-kubernetes"
+        DOCKER_IMAGE_NAME = "us.gcr.io/sincere-chariot-260312/app1@sha256:24b8bd3a7ca8ea802c061d933f75115a95d129187e82b4c540bdea2cebba5776"
     }
     stages {
         stage('Build') {
