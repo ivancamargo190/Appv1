@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: bookinfo-gateway
+  name: appv1-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -16,26 +16,13 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: bookinfo
+  name: appv1
 spec:
   hosts:
   - "*"
   gateways:
-  - bookinfo-gateway
-  http:
-  - match:
-    - uri:
-        exact: /productpage
-    - uri:
-        prefix: /static
-    - uri:
-        exact: /login
-    - uri:
-        exact: /logout
-    - uri:
-        prefix: /api/v1/products
+  - appv1-gateway
     route:
     - destination:
-        host: productpage
         port:
-          number: 9080
+          number: 80
