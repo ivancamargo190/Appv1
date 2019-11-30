@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
       - name: appv1
-        image: us.gcr.io/sincere-chariot-260312/app1@sha256:24b8bd3a7ca8ea802c061d933f75115a95d129187e82b4c540bdea2cebba5776
+        image: us.gcr.io/sincere-chariot-260312/app1@sha256:e14e990cf3de4da0a9ecda6fcc1cf7d15f24b63a432c85a48ed05872dc58e137
         ports:
         - containerPort: 80
